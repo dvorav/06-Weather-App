@@ -20,7 +20,6 @@
     <div class="row mr-4 ml-4">
       <!-- Empty column for spacing-->
 
-      
       <!--   Left Sidebar -->
       <div class="card col-4">
         <div class="card-header">
@@ -39,87 +38,59 @@
       </div>
       <!-- Empty column for spacing-->
       <div class="col-1"></div>
+
       <!-- Current Temperature -->
       <div class="card col-7">
-        <div class="card-header">City name</div>
+        <div class="card-header" id="currentCity">City name</div>
         <div class="card-body">
-          <p class="card-text">Temperature:</p>
-          <p class="card-text">Humidity:</p>
-          <p class="card-text">Wind Speed:</p>
-          <p class="card-text">UV Index:</p>
+          <p class="card-text" id="currentTemp">Temperature:</p>
+          <p class="card-text" id="currentHumid">Humidity:</p>
+          <p class="card-text" id="currentWind">Wind Speed:</p>
+          <p class="card-text" id="currentUV">UV Index:</p>
         </div>
       </div>
     </div>
-<h1 id="head">5 Day Forecast</h1>
-      <!-- 5 Day Forecast-->
+    <h1 id="head">5 Day Forecast</h1>
+    <!-- 5 Day Forecast-->
 
-      <div class="card-group">
-        <div class="card smallCard">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">
-              This is a wider card with supporting text below as a natural
-              lead-in to additional content. This content is a little bit
-              longer.
-            </p>
-            <p class="card-text">
-              <small class="text-muted">Last updated 3 mins ago</small>
-            </p>
-          </div>
-        </div>
-        <div class="card smallCard">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">
-              This card has supporting text below as a natural lead-in to
-              additional content.
-            </p>
-            <p class="card-text">
-              <small class="text-muted">Last updated 3 mins ago</small>
-            </p>
-          </div>
-        </div>
-        <div class="card smallCard">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">
-              This is a wider card with supporting text below as a natural
-              lead-in to additional content. This card has even longer content
-              than the first to show that equal height action.
-            </p>
-            <p class="card-text">
-              <small class="text-muted">Last updated 3 mins ago</small>
-            </p>
-          </div>
-        </div>
-        <div class="card smallCard">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">
-              This is a wider card with supporting text below as a natural
-              lead-in to additional content. This card has even longer content
-              than the first to show that equal height action.
-            </p>
-            <p class="card-text">
-              <small class="text-muted">Last updated 3 mins ago</small>
-            </p>
-          </div>
-        </div>
-        <div class="card smallCard">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">
-              This is a wider card with supporting text below as a natural
-              lead-in to additional content. This card has even longer content
-              than the first to show that equal height action.
-            </p>
-            <p class="card-text">
-              <small class="text-muted">Last updated 3 mins ago</small>
-            </p>
-          </div>
+    <div class="card-group">
+      <div class="card smallCard">
+        <div class="card-body">
+          <h5 class="card-title">Day 1 after</h5>
+          <p id="temp1">Temperature:</p>
+          <p id="humid1">Humidity:</p>
         </div>
       </div>
-    
+      <div class="card smallCard">
+        <div class="card-body">
+          <h5 class="card-title">Day 2 after</h5>
+          <p id="temp2">Temperature:</p>
+          <p id="humid2">Humidity:</p>
+        </div>
+      </div>
+      <div class="card smallCard">
+        <div class="card-body">
+          <h5 class="card-title">Day 3 after</h5>
+          <p id="temp3">Temperature:</p>
+          <p id="humid3">Humidity:</p>
+        </div>
+      </div>
+      <div class="card smallCard">
+        <div class="card-body">
+          <h5 class="card-title">Day 4 after</h5>
+          <p id="temp4">Temperature:</p>
+          <p id="humid4">Humidity:</p>
+        </div>
+      </div>
+      <div class="card smallCard" id="temp5">
+        <div class="card-body">
+          <h5 class="card-title">Day 5 after</h5>
+          <p id="temp5">Temperature:</p>
+          <p id="humid5">Humidity:</p>
+        </div>
+      </div>
+    </div>
+
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
