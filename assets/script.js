@@ -1,5 +1,5 @@
 function weatherInfo() {
-  let cityName = "minneapolis";
+  let cityName = $("#cityValue").val()
   let apiKey = "6c5b1d4ebd6321ec8c97f9ecea056e02";
   let queryUrl =
     "https://api.openweathermap.org/data/2.5/weather?q=" +
@@ -30,12 +30,25 @@ function weatherInfo() {
     console.log(currentWindSpeed + " mph");
     $("#currentWind").text("Wind Speed: " + currentWindSpeed + "mph")
 
-   //UV Ray Index
-    
+//longitude and latitude
+    let long = (response.coord.lon)
+    let lat = (response.coord.lat)
+    console.log(long + "long")
+    console.log(lat + "lat")
 
-    console.log(response)
+   //UV Ray Index
+   urlForUV = "http://api.openweathermap.org/data/2.5/uvi?lat=" + lat + "&lon=" + long + "&appid=6c5b1d4ebd6321ec8c97f9ecea056e02"
+    $.ajax({
+        url: urlForUV,
+        method: "GET",
+    }).then(function (uvIndex) {
+   let currentUVIndex = Math.round(uvIndex.value) 
+        $("#currentUV").text("UV Index: " + currentUVIndex)
+})
   });
 }
+  
+
 
 $("#searchBtn").on("click", weatherInfo);
 
