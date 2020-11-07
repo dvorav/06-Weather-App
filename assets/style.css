@@ -1,0 +1,33 @@
+body {
+    background-color: #c9d7e8;
+}
+.jumbotron {
+    background-color: #5e86ba;
+    color: white;
+}
+input {
+    border-radius: 0%;
+}
+
+.card {
+    box-shadow: 6px 6px 18px -1px rgba(158,142,158,1);
+    padding: 0px;
+    background-color: #edf2f7;
+
+
+}
+.smallCard {
+    padding: 20px;
+    margin: 1.5rem;
+   text-align: center;
+}
+#head {
+    margin: 20px;
+    margin-left: 35px;
+    color:black;
+}
+#searchBtn {
+    padding: 13px;
+    border-radius: 0;
+    margin: 0;
+}
