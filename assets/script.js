@@ -60,16 +60,13 @@ console.log(queryUrl)
    url: forecastUrl,
    method: "GET",
  }).then( function(forecast) {
-   console.log(forecast)
+   //console.log(forecast)
    for(let i = 0; i < 7; i++) {
-    let forecastTemp = forecast.daily[i].temp.day
-    console.log(forecastTemp + "F")
+    let forecastTemp = Math.round(forecast.daily[i].temp.day)
     let forecastHumid = parseInt(forecast.daily[i].wind_speed)
-    console.log(forecastHumid + "mph")
-    
-
-
-    }
+    $("#temp" + i).text("Temperature: " + forecastTemp + " F")
+    $("#humid" + i).text("Humidity: " + forecastHumid + "%")
+ }
   
  })
 
