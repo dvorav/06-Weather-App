@@ -31,3 +31,10 @@ input {
     border-radius: 0;
     margin: 0;
 }
+
+
+.bg-intense {
+    background-color: purple;
+    color: white;
+    border-color: purple;
+}
