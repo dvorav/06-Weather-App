@@ -1,4 +1,6 @@
+// const moment = require("./moment");
 
+// const moment = require("./moment");
 
 function currentWeatherInfo() {
   let cityName = $("#cityValue").val();
@@ -38,8 +40,6 @@ function currentWeatherInfo() {
     let long = response.coord.lon;
     let lat = response.coord.lat;
 
-    
-
     //UV Ray Index
     urlForUV =
       "https://api.openweathermap.org/data/2.5/uvi?lat=" +
@@ -55,19 +55,23 @@ function currentWeatherInfo() {
       $("#currentUV").text("UV Index: " + currentUVIndex);
       // Less than 2
       if (currentUVIndex <= 2) {
-        $("#currentUV").addClass("border border-success p-2 bg-success rounded")
-      } 
+        $("#currentUV").addClass(
+          "border border-success p-2 bg-success rounded"
+        );
+      }
       // Between 3 - 5
-      else if ( 3 <= currentUVIndex <= 5) {
-        $("#currentUV").addClass("border border-warning p-1 bg-intense rounded")
+      else if (3 <= currentUVIndex <= 5) {
+        $("#currentUV").addClass(
+          "border border-warning p-1 bg-intense rounded"
+        );
       }
       // 6 or 7
       else if (currentUVIndex == 6 || currentUVIndex == 7) {
-          $("#currentUV").addClass("border border-danger p-1 bg-danger rounded")
+        $("#currentUV").addClass("border border-danger p-1 bg-danger rounded");
       }
       //Greater than 7
       else if (currentUVIndex > 7) {
-        $("#currentUV").addClass("p1 bg-intense rounded")
+        $("#currentUV").addClass("p1 bg-intense rounded");
       }
     });
 
@@ -90,9 +94,17 @@ function currentWeatherInfo() {
         $("#humid" + i).text("Humidity: " + forecastHumid + "%");
       }
     });
+    //Time ffor forecase
+for (let i = 1; i < 6; i++) {
+  let m = moment();
+  m.add(i, "d");
+
+  let format = m.format("MMM D");
+  $("#day" + i).text(format);
+}
+
   });
 }
 
 $("#searchBtn").on("click", currentWeatherInfo);
 
-console.log(moment)
