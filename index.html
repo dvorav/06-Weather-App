@@ -17,10 +17,9 @@
       <h1>Weather Dashboard</h1>
     </header>
 
+    <!-- Empty column for spacing-->
     <div class="row mr-4 ml-4">
-      <!-- Empty column for spacing-->
-
-      <!--   Left Sidebar -->
+      <!--   Search for city card -->
       <div class="card col-4">
         <div class="card-header">
           <h5>Search For A City</h5>
@@ -28,14 +27,12 @@
           <button class="btn btn-primary" id="searchBtn">Search</button>
           <button class="btn btn-success" id="saveBtn">Add To List</button>
         </div>
-        <ul class="list-group list-group-flush">
-          
-        </ul>
+        <ul class="list-group list-group-flush"></ul>
       </div>
       <!-- Empty column for spacing-->
       <div class="col-1"></div>
 
-      <!-- Current Temperature -->
+      <!-- Current Weather -->
       <div class="card col-7">
         <div class="card-header" id="currentCity">City name</div>
         <div class="card-body">
@@ -46,17 +43,19 @@
         </div>
       </div>
     </div>
-    <h1 class="mt-5" id="head">5 Day Forecast</h1>
-    <!-- 5 Day Forecast-->
 
+    <!-- 5 Day Forecast-->
+    <h1 class="mt-5" id="head">5 Day Forecast</h1>
     <div class="card-group">
       <div class="card smallCard">
+        <!-- Day 1 After-->
         <div class="card-body">
           <h5 class="card-title" id="day1">1 Day After</h5>
           <p id="temp1"></p>
           <p id="humid1"></p>
         </div>
       </div>
+      <!--Day 2 After-->
       <div class="card smallCard">
         <div class="card-body">
           <h5 class="card-title" id="day2">2 Days After</h5>
@@ -64,6 +63,7 @@
           <p id="humid2"></p>
         </div>
       </div>
+      <!-- Day 3 After-->
       <div class="card smallCard">
         <div class="card-body">
           <h5 class="card-title" id="day3">3 Days After</h5>
@@ -71,6 +71,7 @@
           <p id="humid3"></p>
         </div>
       </div>
+      <!-- Day 4 After-->
       <div class="card smallCard">
         <div class="card-body">
           <h5 class="card-title" id="day4">4 Days After</h5>
@@ -78,6 +79,8 @@
           <p id="humid4"></p>
         </div>
       </div>
+      <!-- Day 5 After-->
+
       <div class="card smallCard">
         <div class="card-body">
           <h5 class="card-title" id="day5">5 Days After</h5>

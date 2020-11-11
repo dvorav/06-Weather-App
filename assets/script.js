@@ -90,7 +90,7 @@ function currentWeatherInfo() {
         $("#humid" + i).text("Humidity: " + forecastHumid + "%");
       }
     });
-    //Time ffor forecase
+    //Time for forecase
     for (let i = 1; i < 6; i++) {
       let m = moment();
       m.add(i, "d");
@@ -107,19 +107,23 @@ $("#searchBtn").on("click", currentWeatherInfo);
 $("#saveBtn").on("click", function () {
   //This empties input and adds a btn element to the page
   let cityNameValue = $("#cityValue").val();
-  $("#cityValue").val(" ")
+  $("#cityValue").val(" ");
   //creating button with classes and ids
-  $("ul").append('<button class="btn btn-primary m-1" id='+ cityNameValue +'>' + cityNameValue + '</button>'); 
-  //Sets items to local storage 
-  
-  localStorage.setItem("cityTemp1", $("#currentCity").text())
-  localStorage.setItem("cityHumid1", $("#currentHumid").text())
-  localStorage.setItem("cityWind1", $("#currentWind").text())
-  localStorage.setItem("cityUV1", $("#currentUV").text())
-for (let i = 1; i <= 5; i++) {
-  //Grabbing temp from forecast
-  localStorage.setItem("cityForcastTemp" + i, $("#temp" + i).text())
+  $("ul").append(
+    '<button class="btn btn-primary m-1" id=' +
+      cityNameValue +
+      ">" +
+      cityNameValue +
+      "</button>"
+  );
+  //Sets items to local storage
 
-
+  localStorage.setItem("cityTemp1", $("#currentCity").text());
+  localStorage.setItem("cityHumid1", $("#currentHumid").text());
+  localStorage.setItem("cityWind1", $("#currentWind").text());
+  localStorage.setItem("cityUV1", $("#currentUV").text());
+  for (let i = 1; i <= 5; i++) {
+    //Grabbing temp from forecast
+    localStorage.setItem("cityForcastTemp" + i, $("#temp" + i).text());
   }
 });
