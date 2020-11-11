@@ -90,7 +90,7 @@ function currentWeatherInfo() {
         $("#humid" + i).text("Humidity: " + forecastHumid + "%");
       }
     });
-    //Time for forecase
+    //Time for forecast
     for (let i = 1; i < 6; i++) {
       let m = moment();
       m.add(i, "d");
@@ -123,7 +123,7 @@ $("#saveBtn").on("click", function () {
   localStorage.setItem("cityWind1", $("#currentWind").text());
   localStorage.setItem("cityUV1", $("#currentUV").text());
   for (let i = 1; i <= 5; i++) {
-    //Grabbing temp from forecast
+    //Grabbing temp from forecastt
     localStorage.setItem("cityForcastTemp" + i, $("#temp" + i).text());
   }
 });
