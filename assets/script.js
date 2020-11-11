@@ -1,7 +1,3 @@
-// const moment = require("./moment");
-
-// const moment = require("./moment");
-
 function currentWeatherInfo() {
   let cityName = $("#cityValue").val();
   let apiKey = "6c5b1d4ebd6321ec8c97f9ecea056e02";
@@ -95,16 +91,35 @@ function currentWeatherInfo() {
       }
     });
     //Time ffor forecase
-for (let i = 1; i < 6; i++) {
-  let m = moment();
-  m.add(i, "d");
+    for (let i = 1; i < 6; i++) {
+      let m = moment();
+      m.add(i, "d");
 
-  let format = m.format("MMM D");
-  $("#day" + i).text(format);
-}
-
+      let format = m.format("MMM D");
+      $("#day" + i).text(format);
+    }
   });
 }
-
 $("#searchBtn").on("click", currentWeatherInfo);
 
+//function of save button
+/* save name from input and create a new button for the city, also once clicked it erases what is in the input, also when clicked it puts values in local storage and buttons get values */
+$("#saveBtn").on("click", function () {
+  //This empties input and adds a btn element to the page
+  let cityNameValue = $("#cityValue").val();
+  $("#cityValue").val(" ")
+  //creating button with classes and ids
+  $("ul").append('<button class="btn btn-primary m-1" id='+ cityNameValue +'>' + cityNameValue + '</button>'); 
+  //Sets items to local storage 
+  
+  localStorage.setItem("cityTemp1", $("#currentCity").text())
+  localStorage.setItem("cityHumid1", $("#currentHumid").text())
+  localStorage.setItem("cityWind1", $("#currentWind").text())
+  localStorage.setItem("cityUV1", $("#currentUV").text())
+for (let i = 1; i <= 5; i++) {
+  //Grabbing temp from forecast
+  localStorage.setItem("cityForcastTemp" + i, $("#temp" + i).text())
+
+
+  }
+});
